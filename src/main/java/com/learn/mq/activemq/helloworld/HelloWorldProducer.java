@@ -1,4 +1,4 @@
-package com.learn.mq.activemq.activemq1;
+package com.learn.mq.activemq.helloworld;
 
 import javax.jms.Connection;
 import javax.jms.DeliveryMode;

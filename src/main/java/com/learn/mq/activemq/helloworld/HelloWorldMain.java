@@ -1,9 +1,9 @@
-package com.learn.mq.activemq.activemq1;
+package com.learn.mq.activemq.helloworld;
  
 /**
  * Hello world!
  */
-public class Activemq1 {
+public class HelloWorldMain {
  
     public static void main(String[] args) throws Exception {
         thread(new HelloWorldProducer(), false);

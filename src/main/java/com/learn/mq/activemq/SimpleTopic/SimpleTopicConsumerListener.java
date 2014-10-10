@@ -1,4 +1,4 @@
-package com.learn.mq.activemq.activemq2;
+package com.learn.mq.activemq.SimpleTopic;
 
 import java.text.DecimalFormat;
 
@@ -6,7 +6,7 @@ import javax.jms.MapMessage;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 
-public class Listener implements MessageListener {
+public class SimpleTopicConsumerListener implements MessageListener {
 
 	public void onMessage(Message message) {
 		try {

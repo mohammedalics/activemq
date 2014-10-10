@@ -1,4 +1,4 @@
-package com.learn.mq.activemq.activemq2;
+package com.learn.mq.activemq.SimpleTopic;
 
 import java.util.Hashtable;
 import java.util.Map;
@@ -15,7 +15,7 @@ import javax.jms.Session;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.activemq.command.ActiveMQMapMessage;
 
-public class Publisher {
+public class SimpleTopicPublisher {
 
 	protected int MAX_DELTA_PERCENT = 1;
 	protected Map<String, Double> LAST_PRICES = new Hashtable<String, Double>();
@@ -28,7 +28,7 @@ public class Publisher {
 	protected transient Session session;
 	protected transient MessageProducer producer;
 
-	public Publisher() throws JMSException {
+	public SimpleTopicPublisher() throws JMSException {
 		factory = new ActiveMQConnectionFactory(brokerURL);
 		connection = factory.createConnection();
 		connection.start();
@@ -43,7 +43,7 @@ public class Publisher {
 	}
 
 	public static void main(String[] args) throws JMSException {
-		Publisher publisher = new Publisher();
+		SimpleTopicPublisher publisher = new SimpleTopicPublisher();
 		while (total < 1000) {
 			for (int i = 0; i < count; i++) {
 				publisher.sendMessage(args);
